@@ -1,0 +1,69 @@
+---
+const projects = [
+ {
+  title: 'Booking Site',
+  desc:
+   'Dolore esse enim sint labore magna non. Enim enim consectetur consequat sint officia quis sit cupidatat eiusmod ea sunt fugiat fugiat. Ea voluptate consequat quis tempor mollit nisi aliqua dolore consequat.',
+  stack: ['Gatsby.js', 'GraphCMS', 'Mapbox', 'Stripe', 'Styled'],
+  link: 'http://www.google.com',
+  github: 'http://www.google.com',
+  img: 'https://picsum.photos/300',
+ },
+ {
+  title: 'Guest Shop Site',
+  desc:
+   'Dolore esse enim sint labore magna non. Enim enim consectetur consequat sint officia quis sit cupidatat eiusmod ea sunt fugiat fugiat. Ea voluptate consequat quis tempor mollit nisi aliqua dolore consequat.',
+  stack: ['Next.js', 'Tailwind.css', 'Stripe', 'GoogleAPIs'],
+  link: 'http://www.google.com',
+  github: 'http://www.google.com',
+  img: 'https://picsum.photos/300',
+ },
+ {
+  title: 'Guest Shop Site',
+  desc:
+   'Dolore esse enim sint labore magna non. Enim enim consectetur consequat sint officia quis sit cupidatat eiusmod ea sunt fugiat fugiat. Ea voluptate consequat quis tempor mollit nisi aliqua dolore consequat.',
+  stack: ['HTML', 'CSS', 'JS', 'Node', 'Express', 'MongoDB'],
+  link: 'http://www.google.com',
+  github: 'http://www.google.com',
+  img: 'https://picsum.photos/300',
+ },
+ {
+  title: 'Guest Shop Site',
+  desc:
+   'Dolore esse enim sint labore magna non. Enim enim consectetur consequat sint officia quis sit cupidatat eiusmod ea sunt fugiat fugiat. Ea voluptate consequat quis tempor mollit nisi aliqua dolore consequat.',
+  stack: ['HTML', 'CSS', 'JS', 'Node', 'Express', 'MongoDB'],
+  link: 'http://www.google.com',
+  github: 'http://www.google.com',
+  img: 'https://picsum.photos/300',
+ },
+]
+---
+
+<section class='lg:p-24'>
+ <div>
+  <h2 class='text-center lg:text-right text-4xl my-24'>
+   <span class='text-gr'>2.</span>
+   Projects
+  </h2>
+ </div>
+ <div
+  class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-10'
+ >
+  {
+   projects.map((project) => {
+    return (
+     <div class='text-center mb-14'>
+      <img src={project.img} class='mx-auto' />
+      <h3 class='text-gr text-xl mt-2'>{project.title}</h3>
+      <ul class='flex flex-wrap justify-center my-4'>
+       {project.stack.map((tech) => {
+        return <li class='mx-2 my-2 italic bg-teal-800 px-2'>{tech}</li>
+       })}
+      </ul>
+      <p class='tracking-wide leading-relaxed mx-auto'>{project.desc}</p>
+     </div>
+    )
+   })
+  }
+ </div>
+</section>

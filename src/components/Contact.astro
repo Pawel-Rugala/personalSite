@@ -1,0 +1,33 @@
+---
+import { Icon } from 'astro-icon'
+const icons = [
+ 'entypo-social:github-with-circle',
+ 'entypo-social:linkedin-with-circle',
+ 'entypo-social:twitter-with-circle',
+]
+---
+
+<section class='grid grid-cols-1 gap-10'>
+ <div class=''>
+  <h2 class='text-4xl text-gr text-center my-24'>3.Contact</h2>
+  <img src='https://i.giphy.com/media/fPSxQDOJ7bGso/giphy.gif' />
+ </div>
+ <div class='text-center'>
+  <div>
+   <p class='text-gr'>Send me an e-mail to</p>
+   <a href='mailto:webdevpablo@gmail.com' class='text-3xl'
+    >webdevpablo@gmail.com</a
+   >
+   <p class='mt-10 text-gr'>or get in touch via social media</p>
+   <div class='flex justify-center mx-auto mt-4'>
+    {
+     icons.map((icon) => (
+      <a href='#' class='mx-2'>
+       <Icon name={icon} size={40} />
+      </a>
+     ))
+    }
+   </div>
+  </div>
+ </div>
+</section>

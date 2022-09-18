@@ -2,25 +2,29 @@
 import pr from '../images/pr.png'
 ---
 
-<section class='grid grid-cols-1 lg:grid-cols-2 items-center gap-10'>
- <div class='text-center lg:text-left mt-48 lg:mt-0'>
+<section class='grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:px-24'>
+ <div class='text-center lg:text-left mt-20 lg:mt-0'>
   <h1>
    <span class='text-gr block ml-1 -mb-2'>Hi, my name is</span>
    <span class='block font-black text-big leading-none'
     >Pawel Rugala<span class='text-gr'>.</span>
    </span>
    <span
-    class='block bg-white text-black px-2 py-1 my-5 text-4xl font-bold w-full md:w-4/6 lg:w-full mx-auto'
+    class='block bg-white text-black px-2 py-1 my-10 text-xl md:text-4xl font-bold w-full md:w-4/6 lg:w-full mx-auto'
     >I build things for the web</span
    >
   </h1>
-  <p class='leading-relaxed tracking-wide'>
+  <p class='leading-relaxed tracking-wide w-full md:w-3/5 lg:w-full mx-auto'>
    I am a Software Developer that focus on technologies such as React and Node.
    I have passion for Design and Serverless Technologies. To grow my skills I
    focused on building free eCommerce platform mishop.com.
   </p>
  </div>
  <div>
-  <img src={pr} alt='Pawel Rugala portrait' />
+  <img
+   src={pr}
+   alt='Pawel Rugala portrait'
+   class='mx-auto w-full sm:w-3/5 lg:w-full'
+  />
  </div>
 </section>

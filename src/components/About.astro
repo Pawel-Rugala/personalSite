@@ -1,0 +1,49 @@
+---
+const Text = [
+ {
+  head: 'Life',
+  body:
+   'Excepteur aliqua tempor aute adipisicing ullamco ullamco commodo labore ullamco laborum commodo exercitation consectetur. Irure occaecat ex aliquip eu eu. Elit est cupidatat mollit commodo officia dolore. Eiusmod ea culpa laborum amet qui eu magna Lorem amet aliquip est in',
+ },
+ {
+  head: 'Tech',
+  body:
+   'Excepteur aliqua tempor aute adipisicing ullamco ullamco commodo labore ullamco laborum commodo exercitation consectetur. Irure occaecat ex aliquip eu eu. Elit est cupidatat mollit commodo officia dolore. Eiusmod ea culpa laborum amet qui eu magna Lorem amet aliquip est in',
+ },
+ {
+  head: 'Work',
+  body:
+   'Excepteur aliqua tempor aute adipisicing ullamco ullamco commodo labore ullamco laborum commodo exercitation consectetur. Irure occaecat ex aliquip eu eu. Elit est cupidatat mollit commodo officia dolore. Eiusmod ea culpa laborum amet qui eu magna Lorem amet aliquip est in',
+ },
+]
+---
+
+<section class='grid grid-cols-1 lg:grid-cols-2 items-center xl:px-24'>
+ <div>
+  <h2 class='text-center lg:text-left text-4xl mt-24'>
+   <span class='text-gr'>1.</span>
+   About
+  </h2>
+ </div>
+ <div>
+  <div>
+   {
+    Text.map((item, index) => (
+     <div
+      class={`flex items-center my-20 lg:my-24 ${
+       index === 1 ? 'flex-row-reverse text-right' : 'flex-row text-left'
+      }`}>
+      <h3
+       class={`text-4xl text-gr uppercase mx-3 ${
+        index === 1 ? 'rotate-0' : 'rotate-180'
+       }`}
+       style='writing-mode: vertical-lr;'>
+       {item.head}
+      </h3>
+      <p class='w-full md:w-4/6 lg:w-4/5'>{item.body}</p>
+     </div>
+    ))
+   }
+  </div>
+ </div>
+</section>
