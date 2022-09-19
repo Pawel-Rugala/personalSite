@@ -1,7 +1,21 @@
 ---
+interface Frontmatter {
+ title: string
+ description?: string
+}
+
 import Main from '../../layouts/Main.astro'
+const posts = await Astro.glob<Frontmatter>('./*.md')
 ---
 
 <Main>
  <h1>Hello in blog index</h1>
+ {
+  posts.map((post) => (
+   <div>
+    <h2>{post.frontmatter.title}</h2>
+    <p>{post.frontmatter.description}</p>
+   </div>
+  ))
+ }
 </Main>
