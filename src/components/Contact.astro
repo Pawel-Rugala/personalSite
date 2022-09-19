@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon'
+import Icon from '../components/Icon'
 const icons = [
  'entypo-social:github-with-circle',
  'entypo-social:linkedin-with-circle',
@@ -22,7 +22,7 @@ const icons = [
      {
       icons.map((icon) => (
        <a href='#' class='mx-2'>
-        <Icon name={icon} size={40} />
+        <Icon client:idle icon={icon} height={40} className='' />
        </a>
       ))
      }
